@@ -1,0 +1,1038 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="J1mmyLau">
+      
+      
+        <link rel="canonical" href="https://J1mmyLau.github.io/Mathematical%20Analysis/Series%20of%20numbers.html">
+      
+      
+        <link rel="prev" href="../Linear%20Algebra/%E5%A4%8D%E4%B9%A0.html">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.0.4">
+    
+    
+      
+        <title>数项级数 - J1mmyLau's blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9c788c91.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="/" title="J1mmyLau&#39;s blog" class="md-header__button md-logo" aria-label="J1mmyLau's blog" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            J1mmyLau's blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数项级数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="cyan"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="lime"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Welcome to JimmyLau’s Blog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Linear%20Algebra/%E5%A4%8D%E4%B9%A0.html" class="md-tabs__link">
+        Linear Algebra
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Series%20of%20numbers.html" class="md-tabs__link md-tabs__link--active">
+        Mathematical Analysis
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/" title="J1mmyLau&#39;s blog" class="md-nav__button md-logo" aria-label="J1mmyLau's blog" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    J1mmyLau's blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Welcome to JimmyLau’s Blog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Linear Algebra
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linear%20Algebra/%E5%A4%8D%E4%B9%A0.html" class="md-nav__link">
+        复习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Mathematical Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mathematical Analysis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mathematical Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          数项级数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Series%20of%20numbers.html" class="md-nav__link md-nav__link--active">
+        数项级数
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="== 大纲导航 ==">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      == 大纲导航 ==
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数项级数敛散性的判别
+  </a>
+  
+    <nav class="md-nav" aria-label="数项级数敛散性的判别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    Cauchy判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数项级数的性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    正项级数
+  </a>
+  
+    <nav class="md-nav" aria-label="正项级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    引理:单调有界收敛准则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    比较判别法
+  </a>
+  
+    <nav class="md-nav" aria-label="比较判别法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    推论:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    比较判别法的应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    比式判别法和根式判别法
+  </a>
+  
+    <nav class="md-nav" aria-label="比式判别法和根式判别法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    比式判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    根式判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    极限形式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    积分判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabbe" class="md-nav__link">
+    Rabbe判别法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    交错级数
+  </a>
+  
+    <nav class="md-nav" aria-label="交错级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leibnitz" class="md-nav__link">
+    Leibnitz判别法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    绝对收敛
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    一般级数
+  </a>
+  
+    <nav class="md-nav" aria-label="一般级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#able" class="md-nav__link">
+    Able判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dirichlet" class="md-nav__link">
+    Dirichlet判别法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="== 大纲导航 ==">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      == 大纲导航 ==
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数项级数敛散性的判别
+  </a>
+  
+    <nav class="md-nav" aria-label="数项级数敛散性的判别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    Cauchy判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数项级数的性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    正项级数
+  </a>
+  
+    <nav class="md-nav" aria-label="正项级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    引理:单调有界收敛准则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    比较判别法
+  </a>
+  
+    <nav class="md-nav" aria-label="比较判别法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    推论:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    比较判别法的应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    比式判别法和根式判别法
+  </a>
+  
+    <nav class="md-nav" aria-label="比式判别法和根式判别法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    比式判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    根式判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    极限形式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    积分判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rabbe" class="md-nav__link">
+    Rabbe判别法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    交错级数
+  </a>
+  
+    <nav class="md-nav" aria-label="交错级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leibnitz" class="md-nav__link">
+    Leibnitz判别法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    绝对收敛
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    一般级数
+  </a>
+  
+    <nav class="md-nav" aria-label="一般级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#able" class="md-nav__link">
+    Able判别法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dirichlet" class="md-nav__link">
+    Dirichlet判别法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">数项级数<a class="headerlink" href="#_1" title="悬停加载">&para;</a></h1>
+<p>凡是级数都是对某一个求和式的分析，其中最重要的是对与其敛散性的分析。对于数项级数，每一项是单变元的，因此其性质相对简单。</p>
+<h2 id="_2">数项级数敛散性的判别<a class="headerlink" href="#_2" title="悬停加载">&para;</a></h2>
+<h3 id="cauchy">Cauchy判别法<a class="headerlink" href="#cauchy" title="悬停加载">&para;</a></h3>
+<div class="arithmatex">\[\exists N \quad n&gt;N \quad \forall p \quad |S_{n+p} - S_n|&lt;\varepsilon\]</div>
+<div class="arithmatex">\[e.g. \sum_{i=1}^{\infty} \frac{1}{i^2}=\frac{\pi^2}{6}\]</div>
+<h3 id="_3">数项级数的性质<a class="headerlink" href="#_3" title="悬停加载">&para;</a></h3>
+<ul>
+<li>线性性</li>
+<li>有限项课做CRUD(没有查说是)</li>
+<li>对于收敛的级数,任意加括号后级数仍然收敛,逆否命题即为:任意加括号后发散的级数一定发散</li>
+</ul>
+<h2 id="_4">正项级数<a class="headerlink" href="#_4" title="悬停加载">&para;</a></h2>
+<p>对于一般的级数,其性质过于复杂,大部分时候数项数列都是相对有规律的,下面先讨论全部都是正项的级数求和的敛散性判别.</p>
+<h3 id="_5">引理:<em>单调有界收敛准则</em><a class="headerlink" href="#_5" title="悬停加载">&para;</a></h3>
+<p>单调有界数列收敛,对于正项级数来说<span class="arithmatex">\(S_n\)</span>一定是单调递增的,因此只需要证明其有界即可判断级数的敛散性.</p>
+<h3 id="_6">比较判别法<a class="headerlink" href="#_6" title="悬停加载">&para;</a></h3>
+<p>对于正项级数,可以通过比较判别法来判断其敛散性,即与一个已知的收敛或发散的级数进行比较.对于:<span class="arithmatex">\(\sum_{i=1}^{\infty} a_i\)</span>与 <span class="arithmatex">\(\sum_{i=1}^{\infty} b_i\)</span>
+- 如果<span class="arithmatex">\(\sum_{i=1}^{\infty} b_i\)</span>收敛,且<span class="arithmatex">\(\forall i \quad a_i \leq b_i\)</span>,则<span class="arithmatex">\(\sum_{i=1}^{\infty} a_i\)</span>也收敛.
+- 如果<span class="arithmatex">\(\sum_{i=1}^{\infty} b_i\)</span>发散,且<span class="arithmatex">\(\forall i \quad a_i \geq b_i\)</span>,则<span class="arithmatex">\(\sum_{i=1}^{\infty} a_i\)</span>也发散. </p>
+<p>简单来说就是大收敛 <span class="arithmatex">\(\Rightarrow\)</span> 小收敛,小发散 <span class="arithmatex">\(\Rightarrow\)</span> 大发散</p>
+<h4 id="_7">推论:<a class="headerlink" href="#_7" title="悬停加载">&para;</a></h4>
+<p>如果有<span class="arithmatex">\(\lim_{i \to \infty} \frac{a_i}{b_i} = l\)</span>:
+- 如果<span class="arithmatex">\(l &lt; 1\)</span>,则<span class="arithmatex">\(\sum_{i=1}^{\infty} a_i\)</span>收敛.
+- 如果<span class="arithmatex">\(l &gt; 1\)</span>,则<span class="arithmatex">\(\sum_{i=1}^{\infty} a_i\)</span>发散.
+- 如果<span class="arithmatex">\(l = 1\)</span>,则无法判断.</p>
+<h4 id="_8">比较判别法的应用<a class="headerlink" href="#_8" title="悬停加载">&para;</a></h4>
+<ul>
+<li><strong>p级数</strong>: <span class="arithmatex">\(\sum_{i=1}^{\infty} \frac{1}{i^p}\)</span>,当<span class="arithmatex">\(p&gt;1\)</span>时收敛,否则发散.</li>
+<li><strong>几何级数</strong>: <span class="arithmatex">\(\sum_{i=0}^{\infty} ar^i\)</span>,当<span class="arithmatex">\(|r|&lt;1\)</span>时收敛,否则发散.</li>
+<li><strong>调和级数</strong>: <span class="arithmatex">\(\sum_{i=1}^{\infty} \frac{1}{i}\)</span>,发散.</li>
+<li><strong>对数级数</strong>: <span class="arithmatex">\(\sum_{i=1}^{\infty} \frac{1}{i \ln(i)}\)</span>,发散.</li>
+<li><strong>指数级数</strong>: <span class="arithmatex">\(\sum_{i=0}^{\infty} \frac{1}{i!}\)</span>,收敛.</li>
+<li><strong>幂级数</strong>: <span class="arithmatex">\(\sum_{i=0}^{\infty} a_i x^i\)</span>,收敛半径为<span class="arithmatex">\(R=\limsup_{i \to \infty} |a_i|^{1/i}\)</span>,当<span class="arithmatex">\(|x|&lt;R\)</span>时收敛,否则发散.</li>
+</ul>
+<p><strong>利用比式判别法可以忽略掉级数的低阶项,只需要关注高阶项的敛散性,从而简化计算过程.</strong></p>
+<h3 id="_9">比式判别法和根式判别法<a class="headerlink" href="#_9" title="悬停加载">&para;</a></h3>
+<p>比式判别法和根式判别法是比较判别法的变种,它们通过比较级数的项与某个等比数列的项来判断级数的敛散性.</p>
+<h4 id="_10">比式判别法<a class="headerlink" href="#_10" title="悬停加载">&para;</a></h4>
+<p>若对一切<span class="arithmatex">\(n&gt;N\)</span>,成立不等式
+$$
+\frac{a_{n+1}}{a_n} \leq r &lt; 1
+$$
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>收敛.</p>
+<p>若对一切<span class="arithmatex">\(n&gt;N\)</span>,成立不等式
+$$
+\frac{a_{n+1}}{a_n} \geq r &gt; 1
+$$
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>发散.</p>
+<h4 id="_11">根式判别法<a class="headerlink" href="#_11" title="悬停加载">&para;</a></h4>
+<p>若对一切<span class="arithmatex">\(n&gt;N\)</span>,成立不等式
+$$
+{a_n}^{1/n} \leq r &lt; 1
+$$
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>收敛.
+若对一切<span class="arithmatex">\(n&gt;N\)</span>,成立不等式
+$$
+{a_n}^{1/n} \geq r &gt; 1
+$$
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>发散.</p>
+<h4 id="_12">极限形式<a class="headerlink" href="#_12" title="悬停加载">&para;</a></h4>
+<p>极限形式的比式判别法和根式判别法是它们的极限形式,即当<span class="arithmatex">\(\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = r\)</span>或<span class="arithmatex">\(\lim_{n \to \infty} {a_n}^{1/n} = r\)</span>时,可以直接判断级数的敛散性. 这两种形式在实际应用中非常常见,因为它们可以简化计算过程,当级数的项满足某些规律时,可以直接使用极限形式来判断级数的敛散性.</p>
+<h3 id="_13">积分判别法<a class="headerlink" href="#_13" title="悬停加载">&para;</a></h3>
+<p>对于一个正项级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>,如果存在一个函数<span class="arithmatex">\(f(x)\)</span>满足<span class="arithmatex">\(f(n) = a_n\)</span>且<span class="arithmatex">\(f(x)\)</span>在区间<span class="arithmatex">\([1, \infty)\)</span>上单调递减且非负,则可以使用积分<span class="arithmatex">\(\int_1^{\infty} f(x) \, dx\)</span>来判断级数的敛散性.
+- 如果积分收敛,则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>也收敛.
+- 如果积分发散,则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>也发散.</p>
+<p>(<strong>事实上这里只需要<span class="arithmatex">\(f(x)\)</span>在某一项之后开始递减即可</strong>)</p>
+<h3 id="rabbe">Rabbe判别法<a class="headerlink" href="#rabbe" title="悬停加载">&para;</a></h3>
+<p>Rabbe判别法是一个特殊的判别法,它适用于某些收敛到1相对缓慢的级数形式. 设有一个正项级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>满足以下条件:
+$$n(1-\frac{a_n+1}{a_n}) \geq r &gt;1 $$ 
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>收敛.
+如果满足以下条件:
+$$n(1-\frac{a_n+1}{a_n}) \leq r &lt; 1 $$
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>发散.</p>
+<h2 id="_14">交错级数<a class="headerlink" href="#_14" title="悬停加载">&para;</a></h2>
+<p>交错级数是指项的符号交替变化的级数,例如<span class="arithmatex">\(\sum_{n=1}^{\infty} (-1)^n a_n\)</span>或<span class="arithmatex">\(\sum_{n=1}^{\infty} (-1)^{n+1} a_n\)</span>.对于交错级数的敛散性判别,可以使用交错级数判别法.</p>
+<h3 id="leibnitz">Leibnitz判别法<a class="headerlink" href="#leibnitz" title="悬停加载">&para;</a></h3>
+<p>Leibnitz判别法是一个特殊的判别法,它适用于交错级数.设有一个交错级数<span class="arithmatex">\(\sum_{n=1}^{\infty} (-1)^{n+1} a_n\)</span>满足以下条件:
+1. <span class="arithmatex">\(a_n\)</span>是单调递减的,即<span class="arithmatex">\(a_{n+1} \leq a_n\)</span>.
+2. <span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span>.
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} (-1)^{n+1} a_n\)</span>收敛.</p>
+<h2 id="_15">绝对收敛<a class="headerlink" href="#_15" title="悬停加载">&para;</a></h2>
+<p>绝对收敛是指级数的绝对值级数收敛,即对于一个级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>,如果级数<span class="arithmatex">\(\sum_{n=1}^{\infty} |a_n|\)</span>收敛,则称级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span>绝对收敛.绝对收敛是一个强的收敛条件,因为绝对收敛的级数一定收敛,但收敛的级数不一定绝对收敛.
+绝对收敛的级数具有以下性质:
+- 绝对收敛的级数可以任意重排,仍然收敛（对于条件收敛的级数，我们可以重排使得其收敛到任意值,甚至发散）.
+- 绝对收敛的级数可以任意加括号,仍然收敛.</p>
+<h2 id="_16">一般级数<a class="headerlink" href="#_16" title="悬停加载">&para;</a></h2>
+<h3 id="able">Able判别法<a class="headerlink" href="#able" title="悬停加载">&para;</a></h3>
+<p>先来看一个引理</p>
+<p>(Abel引理) 若:
+1. <span class="arithmatex">\(\{\varepsilon_n\}\)</span>为单调数列.
+2. 对于任意整数<span class="arithmatex">\(k(1\le k\le n)\)</span> ,有<span class="arithmatex">\(|\sigma_k |\leq A\)</span>(这里<span class="arithmatex">\(\sigma_k = \sum_{i=1}^k v_i\)</span>).记<span class="arithmatex">\(\varepsilon = \max_{k=1}^n{|\varepsilon_k|}\)</span> 有
+<span class="arithmatex">\(<span class="arithmatex">\(｜\sum_{k=1}^n\varepsilon_kv_k｜\le 3\varepsilon A\)</span>\)</span></p>
+<p><strong>证明</strong>: 由条件1可知
+$$
+\varepsilon_1-\varepsilon_2,\varepsilon_2-\varepsilon_3,······,\varepsilon_{n-1}-\varepsilon_n
+$$
+都是正数,因此</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left| \sum_{k=1}^n \varepsilon_k v_k \right|
+&amp;= \left| \sum_{k=2}^n (\varepsilon_{k-1} - \varepsilon_k)v_k + \varepsilon_n v_n \right| \text{（使用Abel变换）}\\
+&amp;\le |\varepsilon_n| A + \sum_{k=2}^n (\varepsilon_{k-1} - \varepsilon_k) A \\
+&amp;= |\varepsilon_n| A + |\varepsilon_1 - \varepsilon_n| A \\
+&amp;\le (|\varepsilon_1| + 2|\varepsilon_n|) \varepsilon A \\
+&amp;\le 3\varepsilon A
+\end{align*}
+\]</div>
+<p>由改引理即可得出Abel判别法。Abel判别法在上册中也有提及,用于判断积分的敛散性.而在数项级数中,它可以用于判断一般级数<span class="arithmatex">\(\sum a_nb_n\)</span>d的敛散性.设有一个级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n b_n\)</span>满足以下条件:
+1. <span class="arithmatex">\({a_n}\)</span>为单调有界数列.
+2. 级数<span class="arithmatex">\(\sum_{n=1}^{\infty} b_n\)</span>收敛.
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n b_n\)</span>收敛.</p>
+<p>由于Abel判别法需要一个收敛的级数，因此对于含有<span class="arithmatex">\((-1)^n\frac{1}{n}\)</span>的级数非常常用。</p>
+<h3 id="dirichlet">Dirichlet判别法<a class="headerlink" href="#dirichlet" title="悬停加载">&para;</a></h3>
+<p>Dirichlet判别法可以有Abel判别法推出.设有一个级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n b_n\)</span>满足以下条件:
+1. <span class="arithmatex">\({a_n}\)</span>为单调递减趋向于0的数列.
+2. 级数<span class="arithmatex">\(\sum_{n=1}^{\infty} b_n\)</span>有界.
+则级数<span class="arithmatex">\(\sum_{n=1}^{\infty} a_n b_n\)</span>收敛.</p>
+<p>Dirichlet判别法需要一个有界级数，因此对于含有<span class="arithmatex">\(\sin nx\)</span>和<span class="arithmatex">\(\cos nx\)</span>的级数非常常用.它可以用于判断一些特殊的级数的敛散性,例如<span class="arithmatex">\(\sum_{n=1}^{\infty} \frac{\sin n}{n}\)</span>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../Linear%20Algebra/%E5%A4%8D%E4%B9%A0.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 复习" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  上一页
+                </span>
+                复习
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 J1mmyLau
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/J1mmyLau" target="_blank" rel="noopener" title="JimmyLau的GitHub主页" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
