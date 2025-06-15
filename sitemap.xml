@@ -2,18 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://J1mmyLau.github.io/index.html</loc>
-         <lastmod>2025-06-04</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://J1mmyLau.github.io/General%20Physics/%E5%A4%8D%E4%B9%A0.html</loc>
-         <lastmod>2025-06-04</lastmod>
+         <lastmod>2025-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://J1mmyLau.github.io/General%20Physics/%E6%9C%89%E7%94%A8%E7%9A%84%E5%85%AC%E5%BC%8F.html</loc>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
          <loc>https://J1mmyLau.github.io/Linear%20Algebra/%E5%A4%8D%E4%B9%A0.html</loc>
-         <lastmod>2025-06-04</lastmod>
+         <lastmod>2025-06-15</lastmod>
     </url>
     <url>
-         <loc>https://J1mmyLau.github.io/Mathematical%20Analysis/Series%20of%20numbers.html</loc>
-         <lastmod>2025-06-04</lastmod>
+         <loc>https://J1mmyLau.github.io/Mathematical%20Analysis/%E5%82%85%E7%AB%8B%E5%8F%B6%E7%BA%A7%E6%95%B0.html</loc>
+         <lastmod>2025-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://J1mmyLau.github.io/Mathematical%20Analysis/%E5%87%BD%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0.html</loc>
+         <lastmod>2025-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://J1mmyLau.github.io/Mathematical%20Analysis/%E6%95%B0%E9%A1%B9%E7%BA%A7%E6%95%B0.html</loc>
+         <lastmod>2025-06-15</lastmod>
     </url>
 </urlset>
